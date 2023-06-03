@@ -9,5 +9,6 @@ jobs:
     uses: DamianBis/actions-demo-lib/.github/workflows/pr.yaml@main
     with:
       repo: ${{ github.repository }}
+      workflow_revision: main
     secrets:
       envPAT: ${{ secrets.GITHUB_TOKEN }}
