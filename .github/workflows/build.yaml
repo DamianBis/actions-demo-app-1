@@ -1,3 +1,7 @@
+on:
+  push:
+    branches: ['main']
+
 jobs:
   do-build:
     uses: DamianBis/actions-demo-lib/.github/workflows/buildImage.yml@main
