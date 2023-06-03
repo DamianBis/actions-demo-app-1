@@ -3,18 +3,11 @@ on:
     branches: ['main']
   pull_request: {}
 
-
-
 jobs:
-  do-build:
+  pr-yaml:
     permissions: write-all
-    uses: DamianBis/actions-demo-lib/.github/workflows/buildImage.yaml@main
+    uses: DamianBis/actions-demo-lib/.github/workflows/pr.yaml@main
     with:
       repo: ${{ github.repository }}
     secrets:
       envPAT: ${{ secrets.GITHUB_TOKEN }}
-
-  post-build-checks:
-    needs: do-build
-    permissions: write-all
-    uses: DamianBis/actions-demo-lib/.github/workflows/buildChecks.yaml@main
