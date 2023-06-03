@@ -11,4 +11,3 @@ jobs:
       repo: ${{ github.repository }}
     secrets:
       envPAT: ${{ secrets.GITHUB_TOKEN }}
-      
