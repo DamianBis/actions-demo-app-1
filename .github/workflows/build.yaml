@@ -1,0 +1,7 @@
+jobs:
+  do-build:
+    uses: DamianBis/actions-demo-lib/.github/workflows/buildImage.yml@main
+    with:
+      repo: ${{ github.repository }}
+    secrets:
+      envPAT: ${{ secrets.GITHUB_TOKEN }}
