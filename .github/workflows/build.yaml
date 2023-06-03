@@ -4,6 +4,7 @@ on:
 
 jobs:
   do-build:
+    permissions: write-all
     uses: DamianBis/actions-demo-lib/.github/workflows/buildImage.yml@main
     with:
       repo: ${{ github.repository }}
