@@ -4,7 +4,7 @@ on:
 
 jobs:
   do-build:
-    uses: DamianBis/actions-demo-lib/.github/workflows/buildImage.yml@main
+    uses: DamianBis/actions-demo-lib/.github/workflows/buildImage.yaml@main
     with:
       repo: ${{ github.repository }}
     secrets:
