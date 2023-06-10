@@ -1,0 +1,12 @@
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  run:
+    permissions: write-all
+    uses: DamianBis/actions-demo-lib/.github/workflows/main.yaml@main
+    with:
+      repo: ${{ github.repository }}
+    secrets:
+      envPAT: ${{ secrets.GITHUB_TOKEN }}
